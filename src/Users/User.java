@@ -4,7 +4,7 @@ public class User {
     private String login;
     private String password;
     private String firstName;
-    private String secondName;
+    private String lastName;
     private String city;
     private int birthYear;
     private String role = "USER";
@@ -13,7 +13,7 @@ public class User {
         this.login = login;
         this.password = password;
         this.firstName = firstName;
-        this.secondName = secondName;
+        this.lastName = secondName;
         this.city = city;
         this.birthYear = birthYear;
         this.role = role;
@@ -43,12 +43,12 @@ public class User {
         this.firstName = firstName;
     }
 
-    public String getSecondName() {
-        return secondName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getCity() {

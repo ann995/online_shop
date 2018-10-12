@@ -14,7 +14,7 @@
                 if (existsLogin != null) {
             %>
             <div class="alert alert-info">
-                Login <%=existsLogin%> already exists on this shop. Give a different login.
+                Login <%=existsLogin%> already exists on this shop! Give a different login.
             </div>
             <%
                 }
@@ -22,7 +22,7 @@
                 if(password!=null){
             %>
             <div class="alert alert-info">
-                The passwords are different. Try again
+                Passwords do not match! Try again
             </div>
             <%}%>
 

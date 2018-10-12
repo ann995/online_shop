@@ -25,5 +25,12 @@ public class UsersDao {
         usersList.add(new User("jnowak","nowak123","Jan","Nowak","Krakow",1987,"USER"));
     }
 
+    public static void updateUser(User updateUser, String firstName, String lastName, String city, int birthYear){
+        updateUser.setFirstName(firstName);
+        updateUser.setLastName(lastName);
+        updateUser.setCity(city);
+        updateUser.setBirthYear(birthYear);
+    }
+
 
 }
