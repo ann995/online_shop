@@ -18,4 +18,9 @@ public class ProductsDao {
     public static void addProduct(Product addProduct){
         allProducts.add(addProduct);
     }
+
+    static{
+        allProducts.add(new Product(1,"Hammer","Tools","Indestructible hammer!",30));
+        allProducts.add(new Product(2,"Hatchet","Tools","Handy hatchet!",45));
+    }
 }
