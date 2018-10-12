@@ -5,14 +5,14 @@ public class Product {
     private String category;
     private String description;
     private double price;
-    private int id;
 
-    public Product(int id, String name, String category, String description, double price) {
+
+    public Product( String name, String category, String description, double price) {
         this.name = name;
         this.category = category;
         this.description = description;
         this.price = price;
-        this.id = id;
+
     }
 
     public String getName() {
@@ -47,11 +47,4 @@ public class Product {
         this.price = price;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }

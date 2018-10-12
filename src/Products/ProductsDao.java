@@ -11,16 +11,13 @@ public class ProductsDao {
         return allProducts;
     }
 
-    public static Product getProductById(int id){
-        return allProducts.stream().filter(p->p.getId()==id).findFirst().orElse(null);
-    }
-
     public static void addProduct(Product addProduct){
         allProducts.add(addProduct);
     }
 
     static{
-        allProducts.add(new Product(1,"Hammer","Tools","Indestructible hammer!",30));
-        allProducts.add(new Product(2,"Hatchet","Tools","Handy hatchet!",45));
+        allProducts.add(new Product("Hammer","Tools","Indestructible hammer!",30));
+        allProducts.add(new Product("Hatchet","Tools","Handy hatchet!",45));
     }
+
 }
