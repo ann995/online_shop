@@ -1,6 +1,5 @@
 <%@ page import="Products.Product" %>
 <%@ page import="java.util.List" %>
-<%@ page import="static Products.ProductsDao.getAllProducts" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -41,7 +40,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <% List<Product> allProducts = getAllProducts();
+                <% List<Product> allProducts = (List<Product>) request.getAttribute("allProducts");
                     for (Product product : allProducts) {%>
                 <tr>
                     <td><%=product.getName()%>
@@ -51,8 +50,8 @@
                     </td>
                     <td><%=product.getPrice()%> PLN</td>
                     <td>
-                        <a href="productDetails.jsp?id=123" class="btn btn-primary d-inline-block">Details</a>
-                        <a href="addToCart?productId=123" class="btn btn-success d-inline-block">Add to Cart</a>
+                        <a href="productDetails.jsp?id=<%=product.getId()%>" class="btn btn-primary d-inline-block">Details</a>
+                        <a href="addToCart?productId=<%=product.getId()%>" class="btn btn-success d-inline-block">Add to Cart</a>
                     </td>
                 </tr>
                 <%}%>

@@ -1,7 +1,5 @@
 <%@ page import="Users.User" %>
 <%@ page import="java.util.List" %>
-<%@ page import="static Users.UsersDao.getAllUsers" %>
-<%@ page import="Users.UsersDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -38,7 +36,7 @@
                 </thead>
                 <tbody>
                 <%
-                    List<User> usersList = getAllUsers();
+                    List<User> usersList = (List<User>) request.getAttribute("users");
                     for (User userList : usersList) {
 
                 %>

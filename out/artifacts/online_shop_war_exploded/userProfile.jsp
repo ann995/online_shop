@@ -1,5 +1,4 @@
 <%@ page import="Users.User" %>
-<%@ page import="static Users.UsersDao.getUserByLogin" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -53,15 +52,15 @@
 
 
             <h4 class="display-6 font-weight-normal">Edit data</h4>
-            <% String login = (String) request.getSession(false).getAttribute("username");
-                User user = getUserByLogin(login);
+            <%
+                User user = (User) request.getAttribute("user");
                 String error = request.getParameter("error");
                 String update = request.getParameter("update");
                 if (update != null) { %>
             <div class="alert alert-success" role="alert">
                 User data changed!
             </div>
-            <%} else if(error!=null) {%>
+            <%} else if (error != null) {%>
             <div class="alert alert-danger" role="alert">
                 Error occurred while changing data :(
             </div>
@@ -72,23 +71,23 @@
                     <label for="firstName">First name</label>
                     <input id="firstName" name="firstName" type="text" class="form-control"
                            value=<%=user.getFirstName()%>>
-                                   </div>
-                    <div class="form-group">
-                        <label for="lastName">Last name</label>
-                        <input id="lastName" name="lastName" type="text" class="form-control"
-                               value=<%=user.getLastName()%>>
-                    </div>
-                    <div class="form-group">
-                        <label for="city">Last name</label>
-                        <input id="city" name="city" type="text" class="form-control"
-                               value=<%=user.getCity()%>>
-                    </div>
-                    <div class="form-group">
-                        <label for="birthYear">Birth year</label>
-                        <input id="birthYear" name="birthYear" type="number" class="form-control"
-                               value=<%=user.getBirthYear()%>>
-                    </div>
-                    <input type="submit" class="btn btn-dark" value="Save">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last name</label>
+                    <input id="lastName" name="lastName" type="text" class="form-control"
+                           value=<%=user.getLastName()%>>
+                </div>
+                <div class="form-group">
+                    <label for="city">Last name</label>
+                    <input id="city" name="city" type="text" class="form-control"
+                           value=<%=user.getCity()%>>
+                </div>
+                <div class="form-group">
+                    <label for="birthYear">Birth year</label>
+                    <input id="birthYear" name="birthYear" type="number" class="form-control"
+                           value=<%=user.getBirthYear()%>>
+                </div>
+                <input type="submit" class="btn btn-dark" value="Save">
             </form>
         </div>
     </div>

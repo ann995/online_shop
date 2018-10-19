@@ -7,7 +7,7 @@ public class User {
     private String lastName;
     private String city;
     private int birthYear;
-    private String role = "USER";
+    private String role;
 
     public User(String login, String password, String firstName, String secondName, String city, int birthYear, String role) {
         this.login = login;

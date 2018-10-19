@@ -22,12 +22,12 @@
         <img class="logo" src="gfx/logo.png" alt="">
         </a>
         <a class="py-2 d-none d-md-inline-block" href="index.jsp">Home</a>
-        <a class="py-2 d-none d-md-inline-block" href="products.jsp">All products</a>
+        <a class="py-2 d-none d-md-inline-block" href="productList">All products</a>
         <a class="py-2 d-none d-md-inline-block" href="userProducts.jsp">My products</a>
-        <a class="py-2 d-none d-md-inline-block" href="users.jsp">[ADMIN] Users</a>
+        <a class="py-2 d-none d-md-inline-block" href="usersList">[ADMIN] Users</a>
         <a class="py-2 d-none d-md-inline-block" href="addProduct.jsp">[ADMIN] Add product</a>
         <a class="py-2 d-none d-md-inline-block" href="about.jsp">About</a>
-        <a class="py-2 d-none d-md-inline-block" href="userProfile.jsp">User profile</a>
+        <a class="py-2 d-none d-md-inline-block" href="profileServlet">User profile</a>
             <%String username = (String) request.getSession(false).getAttribute("username");
                 if(username!= null) { %>
         <a class="py-2 d-none d-md-inline-block" href="logout">Logout (<%=username%>)</a>
